@@ -45,10 +45,10 @@ Weather-Dashboard/
 4. Search for a city to view its weather information.
 
 ## Live Demo
-[View Live Website](PASTE_YOUR_NETLIFY_URL_HERE)
+[View Live Website](https://weather-information-dashboard.vercel.app/)
 
 ## GitHub Repository
-[View Source Code](PASTE_YOUR_GITHUB_REPOSITORY_URL_HERE)
+[View Source Code](https://github.com/RajputShraddha27/weather-information-dashboard)
 
 ## Screenshots
 
