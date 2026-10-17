@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/weather-logo.png">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-content">
+            <div>
+                <img src="images/weather-logo.png" alt="" class="logo-img">
+                <a href="#" class="logo">Weatherly</a>
+            </div>
+            <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark mode" title="Toggle theme">
+                <i class="fa-solid fa-moon" id="theme-icon"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="container">
+            <div class="search-content">
+                <h1>Check the Weather</h1>
+                <p>Search for a city to get the latest weather information.</p>
+                <form class="search-form">
+                    <input type="text" id="city-input" placeholder="Enter city name..." autocomplete="off">
+                    <button type="button" id="clear-search" class="clear-search" aria-label="Clear search">&times;</button>
+                    <button type="submit" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+                </form>
+                <button type="button" id="current-location-btn" class="location-btn">
+                    <i class="fa-solid fa-location-crosshairs"></i>
+                    Use My Location
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Recent Searches Section -->
+    <section class="recent-section" id="recent-section">
+        <div class="container">
+            <div class="recent-header">
+                <h2>Recent Searches</h2>
+                <button type="button" id="clear-history-btn">Clear History</button>
+            </div>
+            <div class="recent-list" id="recent-list"></div>
+        </div>
+    </section>
+
+    <!-- Error Message Section -->
+    <section class="error-section" id="error">
+        <div class="container">
+            <div class="error-message">
+                <div class="error-icon">
+                    <i class="fa-solid fa-circle-exclamation"></i>
+                </div>
+                <div>
+                    <h3>Unable to find the city</h3>
+                    <p>Please check the city name and try again.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Weather Information Card -->
+    <section class="weather-section">
+        <div class="container">
+            <div class="weather-card">
+                <div class="weather-header">
+                    <div>
+                        <span class="weather-label">Current Weather</span>
+                        <h2 id="city-name">Ahmedabad</h2>
+                    </div>
+                    <div class="weather-icon" id="weather-icon">
+                        <i class="fa-solid fa-sun"></i>
+                    </div>
+                </div>
+                <div class="weather-content">
+                    <div class="weather-info">
+                        <div class="temperature">
+                            <span id="temperature">28</span><sup>°C</sup>
+                        </div>
+                        <p class="weather-condition" id="weather-condition">Clear Sky</p>
+                        <div class="weather-details">
+                            <div class="weather-detail">
+                                <span class="detail-icon"><i class="fa-solid fa-droplet"></i></span>
+                                <div>
+                                    <span class="detail-label">Humidity</span>
+                                    <strong id="humidity">62%</strong>
+                                </div>
+                            </div>
+                            <div class="weather-detail">
+                                <span class="detail-icon"><i class="fa-solid fa-wind"></i></span>
+                                <div>
+                                    <span class="detail-label">Wind Speed</span>
+                                    <strong id="wind-speed">14 km/h</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="weather-visual" id="weather-visual">
+                        <img src="images/clear-sky.png" alt="Clear sky weather" id="weather-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- 5-Day Forecast Section -->
+    <section class="forecast-section" id="forecast-section">
+        <div class="container">
+            <h2>5-Day Forecast</h2>
+            <div class="forecast-grid" id="forecast-grid"></div>
+        </div>
+    </section>
+
+    <!-- Loading State Section -->
+    <section class="loading-section" id="loading">
+        <div class="container">
+            <div class="loading-message">
+                <i class="fa-solid fa-spinner fa-spin"></i>
+                <p>Fetching weather information...</p>
+            </div>
+        </div>
+    </section>
+    
+    <script src="script.js"></script>
+</body>
+</html>
